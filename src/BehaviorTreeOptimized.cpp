@@ -183,7 +183,7 @@ public:
     void addChild(Behavior& child)
     {
 		ASSERT(m_ChildCount < k_MaxChildrenPerComposite);
-		ptrdiff_t p = (uintptr_t)&child - (uintptr_t)this;
+		std::ptrdiff_t p = (uintptr_t)&child - (uintptr_t)this;
 		ASSERT(p < std::numeric_limits<uint16_t>::max());
 		m_Children[m_ChildCount++] = static_cast<uint16_t>(p);
     }
