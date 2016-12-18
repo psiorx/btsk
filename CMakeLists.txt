@@ -25,9 +25,8 @@ set(SOURCE_FILES
   src/BehaviorTreeShared.cpp
   src/BehaviorTree.cpp
   src/BehaviorTreeEvent.cpp
-  src/Test.cpp
   src/BehaviorTreeOptimized.cpp
+  src/Test.cpp
 )
 
-add_library(btsk ${SOURCE_FILES})
-
+add_executable(run_tests ${SOURCE_FILES})
